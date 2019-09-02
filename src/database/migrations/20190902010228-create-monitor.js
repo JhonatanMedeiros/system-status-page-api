@@ -17,7 +17,15 @@ module.exports = {
         allowNull: false,
         type: DataTypes.STRING,
       },
-      refresh: {
+      description: {
+        allowNull: true,
+        type: DataTypes.STRING,
+      },
+      interval: {
+        allowNull: false,
+        type: DataTypes.INTEGER
+      },
+      status: {
         allowNull: false,
         type: DataTypes.INTEGER
       },

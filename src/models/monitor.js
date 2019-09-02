@@ -8,9 +8,19 @@ export default (sequelize, DataTypes) => {
         allowNull: false,
         type: DataTypes.STRING,
       },
-      refresh: {
-        allowNull: false,
+      description: {
+        allowNull: true,
         type: DataTypes.STRING,
+      },
+      interval: {
+        allowNull: false,
+        type: DataTypes.INTEGER,
+        defaultValue: 5000
+      },
+      status: {
+        allowNull: true,
+        type: DataTypes.INTEGER,
+        defaultValue: 0,
       }
     },
     {

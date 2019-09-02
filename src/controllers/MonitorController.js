@@ -20,6 +20,7 @@ class MonitorController {
     try {
       const monitor = await Monitor.create(req.body);
       res.json(monitor);
+      req.io.emit('monitor', monitor);
     } catch (error) {
       res.status(500);
       res.json({ error, status: 500 });
